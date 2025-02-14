@@ -1,6 +1,6 @@
-# Image Content Analysis with CrewAI
+# AI Crew Image Content Analysis
 
-This project demonstrates an AI-powered analysis system for restaurant management interfaces using CrewAI. It employs multiple AI agents working together to analyze, suggest improvements, and create user stories for UI/UX enhancement.
+This project demonstrates an AI-powered analysis system based on the provided image using CrewAI. It employs multiple AI agents working together to analyze, suggest improvements, and create user stories for UI/UX enhancement.
 
 ## Features
 
