@@ -53,7 +53,7 @@ task_describe_image = Task(
 # Second Agent: Design Improvement Suggestion Agent
 designer_agent = Agent(
     role="Design Improvement Suggestion Agent",
-    goal=f"Review image descriptions and provide actionable improvement suggestions to the described scene {image_path}.",
+    goal=f"Review image descriptions and provide actionable improvement suggestions to the described scene in {image_path}.",
     backstory="You are an expert designer with a keen eye for detail, specializing in B2B restaurant design.",
     verbose=True,
     llm=llm,
@@ -96,8 +96,8 @@ ai_team = Crew(
 result = ai_team.kickoff()
 
 # Write the output to a Markdown file
-with open("output.md", "a") as md_file:
+with open("output.md", "w") as md_file:
     md_file.write("## Crew Execution Results in Markdown:\n")
 
     for idx, task_output in enumerate(result.tasks_output):
-      display(Markdown(f"Agent {idx + 1}: {task_output.agent}\n{task_output.raw}"))
+        md_file.write(f"Agent {idx + 1}: {task_output.agent}\n{task_output.raw}\n\n")
