@@ -3,7 +3,6 @@ from PIL import Image
 from crewai import Agent, Task, Crew, Process, LLM
 from crewai_tools import VisionTool
 from dotenv import load_dotenv
-from IPython.display import display, Markdown
 
 # Load the environment variables
 load_dotenv()
